@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Telsa car dashboard" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Add stylesheets here (for any purpose, eg: fonts, icons, external stylesheets) -->
+
+    <!-- Fontawesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Google material icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <title>Tesla car dashboard</title>
+  </head>
+
+  <body>
+    <div>
+      <div>
+        <!-- Side car section -->
+        <aside>
+          <header>
+            <div>
+              <!-- Car gears -->
+              <small>P</small>
+              <small>R</small>
+              <small>N</small>
+              <small>D</small>
+            </div>
+
+            <!-- Car speed -->
+            <div>
+              <span> 20 </span>
+              <small>MPH</small>
+            </div>
+
+            <!-- Battery percentage -->
+            <div>
+              <small>400 km</small>
+              <span class="material-icons"> battery_full </span>
+            </div>
+          </header>
+
+          <!-- Divider -->
+          <div></div>
+
+          <div>
+            <!-- Steering wheel icon here -->
+            <span>30</span>
+            <i class="fas fa-tachometer-alt"></i>
+          </div>
+
+          <!-- Car's image (you may use any other car image also) -->
+          <div>
+            <img src="images/tesla_car.png" alt="tesla_car" />
+          </div>
+
+          <!-- Some random icons -->
+          <div>
+            <i class="fas fa-globe"></i>
+            <span class="material-icons"> bolt </span>
+            <i class="fas fa-microphone"></i>
+          </div>
+        </aside>
+
+        <!-- Music section -->
+        <section>
+          <!-- Music header -->
+          <header>
+            <h1>My Music playlist</h1>
+            <div>
+              <label>
+                <i class="fas fa-plus"></i>
+                <span>Add</span>
+              </label>
+
+              <!-- File upload will be handled using below input tag -->
+              <input type="file" />
+            </div>
+          </header>
+
+          <!-- All the tracks which are uploaded will be displayed here -->
+          <div class="music-tracks"></div>
+
+          <!-- Music player -->
+          <footer>
+            <!-- Audio tag is responsible for the audio playing. Check out audio tag's controls at W3 schools site and MDN docs -->
+            <audio id="audio"></audio>
+
+            <h4>
+              <!-- Name of the track currently being played -->
+            </h4>
+
+            <!-- Controls -->
+            <div>
+              <button id="prev">
+                <span class="material-icons"> skip_previous </span>
+              </button>
+              <button id="play">
+                <span class="material-icons"> play_arrow </span>
+              </button>
+              <button id="next">
+                <span class="material-icons"> skip_next </span>
+              </button>
+            </div>
+
+            <!-- Progress bar container -->
+            <div>
+              <!-- Current time of the track -->
+              <small></small>
+
+              <!-- Progress bar  -->
+              <input type="range" />
+
+              <!-- Duration of the track -->
+              <small></small>
+            </div>
+          </footer>
+        </section>
+
+        <!-- Add map in the given section -->
+        <section></section>
+      </div>
+
+      <!-- Footer -->
+      <footer>
+        <i class="text-3xl fas fa-car"></i>
+
+        <!-- On clicking this button, map section is displayed -->
+        <button>
+          <i class="fas fa-directions"></i>
+        </button>
+
+        <div>
+          <i class="fas fa-fan"></i>
+          <span>MANUAL</span>
+        </div>
+
+        <!-- On clicking this button, music playlist section is displayed -->
+        <button>
+          <i class="fas fa-music"></i>
+        </button>
+
+        <div>
+          <i class="fas fa-angle-up"></i>
+          <i class="fas fa-volume-up"></i>
+          <i class="fas fa-angle-down"></i>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Add script files before closing body tag -->
+  </body>
+</html>
