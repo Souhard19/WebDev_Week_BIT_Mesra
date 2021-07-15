@@ -17,7 +17,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
     <!-- My styles -->
-    <link rel="stylesheet" href="css\styles.css">
+    <link rel="stylesheet" href="css\left_bar.css">
+    <link rel="stylesheet" href="css\bottom_bar_styles.css">
+    <link rel="stylesheet" href="css\music_panel.css">
 
     <title>Tesla car dashboard</title>
 </head>
@@ -38,7 +40,7 @@
 
                     <!-- Car speed -->
                     <div class="speed">
-                        <span id="curr-speed"> 20 </span>
+                        <div id="curr_speed"> 20 </div>
                         <small>MPH</small>
                     </div>
 
@@ -50,21 +52,22 @@
                 </header>
 
                 <!-- Divider -->
-                <div></div>
+                <div><hr id="hr__"></div>
 
-                <div>
+                <div class="random_icons1">
                     <!-- Steering wheel icon here -->
-                    <span>30</span>
-                    <i class="fas fa-tachometer-alt"></i>
+                    <span id="R_I0">20</span>
+                    <span id="R_I1">30</span>
+                    <i id="R_I2" class="fas fa-tachometer-alt"></i>
                 </div>
 
                 <!-- Car's image (you may use any other car image also) -->
                 <div>
-                    <img src="images/tesla_car.png" alt="tesla_car" />
+                    <img src="images/tesla_car.png" alt="tesla_car" id="img_car" />
                 </div>
 
                 <!-- Some random icons -->
-                <div>
+                <div class="random_icons2">
                     <i id="earth" class="fas fa-globe"></i>
                     <span id="bolt" class="material-icons"> bolt </span>
                     <i id="mic" class="fas fa-microphone"></i>
@@ -72,88 +75,93 @@
             </div>
 
             <!-- Music section -->
-            <div class="working_panel">
+            <div class="music_panel">
                 <!-- Music header -->
-                <header>
-                    <h1>My Music playlist</h1>
-                    <div>
+                <header class="music_header">
+                    <div id="music_head"><h1>Music playlist</h1></div>
+                    <div id="music_add">
                         <label>
                             <i class="fas fa-plus"></i>
                             <span>Add</span>
                         </label>
 
                         <!-- File upload will be handled using below input tag -->
-                        <input type="file" />
+                        <input type="file" style="display: none;" />
                     </div>
                 </header>
 
                 <!-- All the tracks which are uploaded will be displayed here -->
-                <div class="music-tracks"></div>
+                <div class="music_tracks">
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    <p>Lorem ipsum dolor sit.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                </div>
 
                 <!-- Music player -->
-                <footer>
+                <div class="music_footer">
                     <!-- Audio tag is responsible for the audio playing. Check out audio tag's controls at W3 schools site and MDN docs -->
                     <audio id="audio"></audio>
 
-                    <h4>
+                    <span id="curr_track">
                         <!-- Name of the track currently being played -->
-                    </h4>
+                        <p>Lorem, ipsum dopisicing elit.</p>
+                    </span>
 
-                    <!-- Controls -->
-                    <div>
-                        <button id="prev">
-                            <span class="material-icons"> skip_previous </span>
-                        </button>
-                        <button id="play">
-                            <span class="material-icons"> play_arrow </span>
-                        </button>
-                        <button id="next">
-                            <span class="material-icons"> skip_next </span>
-                        </button>
+                    <div class="music_controls">
+                        <!-- Controls -->
+                        <div class="play_pause_buttons">
+                            <button id="prev">
+                                <span class="material-icons"> skip_previous </span>
+                            </button>
+                            <button id="play">
+                                <span class="material-icons"> play_arrow </span>
+                            </button>
+                            <button id="next">
+                                <span class="material-icons"> skip_next </span>
+                            </button>
+                        </div>
+
+                        <!-- Progress bar container -->
+                        <div class="music_time">
+                            <small id="left_time">324</small>      <!-- Current time of the track -->
+                            <input type="range" />  <!-- Progress bar  -->
+                            <small id="right_time">444</small>      <!-- Duration of the track -->
+
+                        </div>
                     </div>
 
-                    <!-- Progress bar container -->
-                    <div>
-
-                        <!-- Current time of the track -->
-                        <small></small>
-                        <!-- Progress bar  -->
-                        <input type="range" />
-                        <!-- Duration of the track -->
-                        <small></small>
-
-                    </div>
-
-                </footer>
-            </div class="working_panel">
+                </div>
+            </div>
 
             <!-- Add map in the given section -->
             <section></section>
         </div>
 
-        <!-- Footer -->
+
+        <!-- BOTTOM BAR -->
         <footer class="bottom_bar">
-            <i class="text-3xl fas fa-car"></i>
+
+            <i class="text-3xl fas fa-car" id="car_button"></i>
 
             <!-- On clicking this button, map section is displayed -->
-            <button>
+            <button id="map_button">
                 <i class="fas fa-directions"></i>
             </button>
 
-            <div id="manual">
+            <div id="manual_button">
                 <i class="fas fa-fan"></i>
-                <span>MANUAL</span>
+                <span id="manual_text">MANUAL</span>
             </div>
 
             <!-- On clicking this button, music playlist section is displayed -->
-            <button>
+            <button id="music_button">
                 <i class="fas fa-music"></i>
             </button>
 
-            <div id="volume">
-                <i class="fas fa-angle-up"></i>
+            <div id="volume_button">
+                <i class="fas fa-angle-up" id="v-up"></i>
                 <i class="fas fa-volume-up"></i>
-                <i class="fas fa-angle-down"></i>
+                <i class="fas fa-angle-down" id="v-down"></i>
             </div>
         </footer>
     </div>
