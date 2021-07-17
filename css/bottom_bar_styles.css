@@ -34,6 +34,8 @@
           font-size: medium;
           left: 14vw;
           bottom: 4.6vh;
+          /* width: 5%; */
+          /* height: 6vh; */
      }
      #volume_button {
           display: inline-block;
