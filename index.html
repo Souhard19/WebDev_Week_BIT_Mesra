@@ -36,10 +36,10 @@
                 <header>
                     <div class="gear">
                         <!-- Car gears -->
-                        <small>P</small>
-                        <small>R</small>
-                        <small>N</small>
-                        <small>D</small>
+                        <small style="padding: 5px;"> P </small>
+                        <small style="padding: 5px;"> R </small>
+                        <small style="padding: 5px;"> N </small>
+                        <small style="padding: 5px;"> D </small>
                     </div>
 
                     <!-- Car speed -->
@@ -90,15 +90,13 @@
                         </label>
 
                         <!-- File upload will be handled using below input tag -->
-                        <input type="file" style="display: none;" />
+                        <input id="files__" type="file" accept="" style="display: none;" onchange="update_track()" multiple/>
                     </div>
                 </header>
 
                 <!-- All the tracks which are uploaded will be displayed here -->
                 <div class="music_tracks">
-                    <p>Lorem ipsum dolor sit amet consectetur.</p>
-                    <p>Lorem ipsum dolor sit.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <p>No files Slected</p>
                 </div>
 
                 <!-- Music player -->
@@ -106,9 +104,9 @@
                     <!-- Audio tag is responsible for the audio playing. Check out audio tag's controls at W3 schools site and MDN docs -->
                     <audio id="audio"></audio>
 
-                    <span id="curr_track">
+                    <span>
                         <!-- Name of the track currently being played -->
-                        <p>Lorem, ipsum dopisicing elit.</p>
+                        <p id="curr_track">N.A.</p>
                     </span>
 
                     <div class="music_controls">
@@ -151,13 +149,13 @@
 
             <div id='map'>
                 <div id="menu">
-                    <input id="satellite-v9" type="radio" name="rtoggle" value="satellite" checked="checked">
                     <!-- See a list of Mapbox-hosted public styles at -->
                     <!-- https://docs.mapbox.com/api/maps/styles/#mapbox-styles -->
+                    <input id="satellite-v9" type="radio" name="rtoggle" value="satellite">
                     <label for="satellite-v9">satellite</label>
                     <input id="light-v10" type="radio" name="rtoggle" value="light">
                     <label for="light-v10">light</label>
-                    <input id="dark-v10" type="radio" name="rtoggle" value="dark">
+                    <input id="dark-v10" type="radio" name="rtoggle" value="dark"  checked="checked">
                     <label for="dark-v10">dark</label>
                     <input id="streets-v11" type="radio" name="rtoggle" value="streets">
                     <label for="streets-v11">streets</label>
@@ -171,7 +169,7 @@
                     container: 'map',
                     style: 'mapbox://styles/mapbox/streets-v11',
                     center: [85.439901, 23.412271], // starting position
-                    zoom: 11 // starting zoom
+                    zoom: 12 // starting zoom
                 });
                 // Add zoom and rotation controls to the map.
                 map.addControl(new mapboxgl.NavigationControl());
@@ -221,7 +219,8 @@
     </div>
 
     <!-- Add script files before closing body tag -->
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/file_handler.js"></script>
 </body>
 
 </html>

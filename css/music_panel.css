@@ -40,8 +40,9 @@
      left: 2vw;
 
      font-family: 'Courier New', Courier, monospace;
-     font-size: 0.69em;
+     font-size: 0.81em;
      font-weight: bold;
+     color: rgb(190, 190, 190);
 }
 .music_footer{
      position: absolute;
@@ -56,9 +57,11 @@
      bottom: 1.1vh;
      
      width: 50%;
+     font-size: 77%;
      
-     font-size: 90%;
      font-family: 'Courier New', Courier, monospace;
+     font-weight: bolder;
+     color: rgb(255, 255, 255);
 }
 .music_controls{
      display: inline-block;
