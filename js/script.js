@@ -38,7 +38,10 @@ music_btn.addEventListener('mouseout', (e) => {
 });
 
 
-
+function alert__(x){
+     if(x.innerText > 50)
+          alert('Slow Down, You have a Family');
+}
 
 
 
