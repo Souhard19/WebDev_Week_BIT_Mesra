@@ -46,6 +46,7 @@ play.addEventListener('click', (e) => {
      audio_tag.append(src);
 
      document.querySelector('.music_footer').append(audio_tag);
+     
      audio_tag.play();
 });
 pause.addEventListener('click', (e) => {
@@ -67,9 +68,8 @@ next.addEventListener('click', (e) => {
      const arr = Array.from(inpFiles.files);
      const len = inpFiles.files.length;
 
-     if (len == 0) {
+     if (len == 0)
           return;
-     }
 
      const track = curr_track.innerText;
      let i;
@@ -116,3 +116,16 @@ prev.addEventListener('click', (e) => {
      play.click();
 });
 
+///////////
+
+const slider = document.getElementById('slider__');
+const curr_time = document.getElementById('left_time');
+const full_time = document.getElementById('right_time');
+
+
+function setTime() {
+     const dur = document.getElementById('audio').duration;
+     console.log(dur);
+     // full_time.innerText =  ':' + String(dur%60);
+
+}

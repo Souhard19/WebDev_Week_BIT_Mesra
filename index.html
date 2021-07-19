@@ -90,7 +90,7 @@
                         </label>
 
                         <!-- File upload will be handled using below input tag -->
-                        <input id="files__" type="file" accept="" style="display: none;" onchange="update_track()" multiple/>
+                        <input id="files__" type="file" accept="audio/*" style="display: none;" onchange="update_track()" multiple/>
                     </div>
                 </header>
 
@@ -129,7 +129,7 @@
                         <!-- Progress bar container -->
                         <div class="music_time">
                             <small id="left_time">3:24</small>      <!-- Current time of the track -->
-                            <input type="range" />  <!-- Progress bar  -->
+                            <input id="slider__" type="range" min="0" max="100" />  <!-- Progress bar  -->
                             <small id="right_time">4:44</small>      <!-- Duration of the track -->
 
                         </div>
@@ -225,6 +225,12 @@
     <script src="js/script.js"></script>
     <script src="js/file_handler.js"></script>
     <script src="js/music_player.js"></script>
+    <script>
+        function time() {
+            var dur = document.getElementById('audio').duration;
+            console.log(dur)
+        }
+    </script>
 </body>
 
 </html>

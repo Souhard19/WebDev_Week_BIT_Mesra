@@ -26,6 +26,9 @@ function update_track(){
           para.addEventListener('click', (e) => {
                const curr_track = document.getElementById('curr_track');
                curr_track.innerText = para.innerText;
+
+               pause.click();
+               play.click();
           });
      }
      music_tracks.innerText = '';
