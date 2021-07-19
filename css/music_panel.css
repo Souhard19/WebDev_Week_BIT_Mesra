@@ -82,6 +82,10 @@
      .music_time{
           display: inline-block;
           position: relative;
+
+          font-size: 1.1em;
+          font-family: monospace;
+
           right: 1vw;
           bottom: 0.6vh;
      }
