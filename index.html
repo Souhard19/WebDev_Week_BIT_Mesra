@@ -36,10 +36,10 @@
                 <header>
                     <div class="gear">
                         <!-- Car gears -->
-                        <small style="padding: 5px;"> P </small>
-                        <small style="padding: 5px;"> R </small>
-                        <small style="padding: 5px;"> N </small>
-                        <small style="padding: 5px;"> D </small>
+                        <small id="__P" style="padding: 5px;"> P </small>
+                        <small id="__R" style="padding: 5px;"> R </small>
+                        <small id="__N" style="padding: 5px;"> N </small>
+                        <small id="__D" style="padding: 5px;"> D </small>
                     </div>
 
                     <!-- Car speed -->
@@ -60,7 +60,7 @@
 
                 <div class="random_icons1">
                     <!-- Steering wheel icon here -->
-                    <span id="R_I0">20</span>
+                    <span id="R_I0"><img src="images/str_wheel.png" id="str_wheel" alt=""></span>
                     <span id="R_I1">30</span>
                     <i id="R_I2" class="fas fa-tachometer-alt"></i>
                 </div>
@@ -103,7 +103,7 @@
                 <div class="music_footer">
                     <!-- Audio tag is responsible for the audio playing. Check out audio tag's controls at W3 schools site and MDN docs -->
                     <audio id="audio" loop>
-                        <source id="source__" src="audio/my example.mp3">
+                        <source id="source__" src="">
                     </audio>
 
                     <span>
@@ -115,14 +115,14 @@
                         <!-- Controls -->
                         <div class="play_pause_buttons">
                             <button id="prev">
-                                <span class="material-icons"> skip_previous </span>
+                                <span id="prev" class="material-icons"> skip_previous </span>
                             </button>
                             <button id="play">
                                 <span id="play__" class="material-icons"> play_arrow </span>
                                 <span id="pause__" class="material-icons" style="display: none;"> stop </span>
                             </button>
                             <button id="next">
-                                <span class="material-icons"> skip_next </span>
+                                <span id="next" class="material-icons"> skip_next </span>
                             </button>
                         </div>
 
