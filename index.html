@@ -102,7 +102,9 @@
                 <!-- Music player -->
                 <div class="music_footer">
                     <!-- Audio tag is responsible for the audio playing. Check out audio tag's controls at W3 schools site and MDN docs -->
-                    <audio id="audio"></audio>
+                    <audio id="audio" loop>
+                        <source id="source__" src="audio/my example.mp3">
+                    </audio>
 
                     <span>
                         <!-- Name of the track currently being played -->
@@ -116,7 +118,8 @@
                                 <span class="material-icons"> skip_previous </span>
                             </button>
                             <button id="play">
-                                <span class="material-icons"> play_arrow </span>
+                                <span id="play__" class="material-icons"> play_arrow </span>
+                                <span id="pause__" class="material-icons" style="display: none;"> stop </span>
                             </button>
                             <button id="next">
                                 <span class="material-icons"> skip_next </span>
@@ -221,6 +224,7 @@
     <!-- Add script files before closing body tag -->
     <script src="js/script.js"></script>
     <script src="js/file_handler.js"></script>
+    <script src="js/music_player.js"></script>
 </body>
 
 </html>

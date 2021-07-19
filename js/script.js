@@ -7,11 +7,12 @@ let map_btn = document.querySelector('#map_button');
 let music_btn = document.querySelector('#music_button');
 
 
-map_btn.addEventListener('click', map_event);
 function map_event(e){
      maps.removeAttribute('style');
      music.setAttribute('style', "display: none;");
 }
+map_btn.addEventListener('click', map_event);
+
 map_btn.addEventListener('mouseover', (e) => {
      map_btn.style.width = '4%';
      map_btn.style.height = '5vh';
@@ -23,11 +24,12 @@ map_btn.addEventListener('mouseout', (e) => {
 });
 
 
-music_btn.addEventListener('click', music_event);
 function music_event(e) {
      music.removeAttribute('style');
      maps.setAttribute('style', "display: none;");
 }
+music_btn.addEventListener('click', music_event);
+
 music_btn.addEventListener('mouseover', (e) => {
      music_btn.style.width = '4%';
      music_btn.style.height = '5vh';
@@ -42,6 +44,17 @@ function alert__(x){
      if(x.innerText > 50)
           alert('Slow Down, You have a Family');
 }
+
+
+
+const add = document.getElementById('music_add');
+
+add.addEventListener('mouseover', (e) => {
+     add.style.color = 'rgb(255, 255, 255)';
+});
+add.addEventListener('mouseout', (e) => {
+     add.setAttribute('style', 'color: rgb(151, 151, 151);');
+});
 
 
 
